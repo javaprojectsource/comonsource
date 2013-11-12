@@ -9,7 +9,7 @@ public class Test {
 		String b = StringUtils.stringValue(null,"aafddsaf");
 		System.out.println("a = " +a);
 		System.out.println("b = " + b);
-		
+		System.out.println(FileUtils.copy("C:/test/11.txt","C:/test/112.txt"));
 	}
 
 }

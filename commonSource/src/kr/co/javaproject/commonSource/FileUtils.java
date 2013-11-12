@@ -16,7 +16,8 @@ public class FileUtils {
 	 * @param target
 	 * @return
 	 */
-	 public static boolean copy(File source, String target) {
+	 @SuppressWarnings("finally")
+	public static boolean copy(File source, String target) {
 	        boolean copyAt = false;
 
 	        BufferedInputStream bis = null;
@@ -30,10 +31,12 @@ public class FileUtils {
 	                    bos.write(byteNumer);
 	                }
 	                copyAt = true;
-	            } catch (IOException e) {
+	            } catch (Exception e) {
+	            	System.out.println("e" + e.toString());
 	                e.printStackTrace();
 	            }
-	        } catch (FileNotFoundException e) {
+	        } catch (Exception e) {
+	        	System.out.println("e" + e.toString());
 	            e.printStackTrace();
 	        } finally {
 	            try {
@@ -57,9 +60,8 @@ public class FileUtils {
 	  */
 	 public static boolean copy(String source, String target) {
 	        File sourceFile = new File(source);
-	        // File targetFile = new File(target);
-
-	        // if (sourceFile.exists() && targetFile.exists()) {
+	        System.out.println(sourceFile.exists());
+	        
 	        if (sourceFile.exists()) {
 	            return FileUtils.copy(sourceFile, target);
 	        } else {
