@@ -39,11 +39,9 @@ public class FileUtils {
 	                }
 	                copyAt = true;
 	            } catch (Exception e) {
-	            	System.out.println("e" + e.toString());
 	                e.printStackTrace();
 	            }
 	        } catch (Exception e) {
-	        	System.out.println("e" + e.toString());
 	            e.printStackTrace();
 	        } finally {
 	            try {
@@ -67,8 +65,6 @@ public class FileUtils {
 	  */
 	 public static boolean copy(String source, String target) {
 	        File sourceFile = new File(source);
-	        System.out.println(sourceFile.exists());
-	        
 	        if (sourceFile.exists()) {
 	            return FileUtils.copy(sourceFile, target);
 	        } else {
