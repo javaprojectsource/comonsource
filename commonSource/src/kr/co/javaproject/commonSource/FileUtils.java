@@ -7,7 +7,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
+/**
+ * FileUtils 
+ * <p>File 처리에 대한 Util</p>
+ * @author www.javaproject.co.kr 
+ * 소스의 자유로운 사용,변경,재 배포가 가능합니다.
+ * 자바프로젝트사이트는 본 소스를 사용함에 있어 모든 결과물에 대한 책임은 지지 않습니다.
+ * 소스에 대한 버그 사항은 사이트 게시판을 통해 남겨주세요.   
+ */
 public class FileUtils {
 	/**
 	 * 파일을 복사 한다 
@@ -125,8 +132,5 @@ public class FileUtils {
 	   */
 	  public static void createDir(String path) {
 		  createDir(new File(path));
-	  }
-	  
-	  
-
+	  }	  	
 }
