@@ -1,4 +1,4 @@
-package kr.co.javaproject.commonSource;
+package commonsource;
 
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;

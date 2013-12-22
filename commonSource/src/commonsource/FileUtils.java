@@ -1,4 +1,4 @@
-package kr.co.javaproject.commonSource;
+package commonsource;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

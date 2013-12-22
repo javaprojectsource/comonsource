@@ -1,4 +1,4 @@
-package kr.co.javaproject.commonSource;
+package commonsource;
 /**
  * StringUtil 
  * <p>String 처리에 대한 Util</p>
