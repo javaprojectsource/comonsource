@@ -13,7 +13,8 @@ import java.io.IOException;
  * @author www.javaproject.co.kr 
  * 소스의 자유로운 사용,변경,재 배포가 가능합니다.
  * 자바프로젝트사이트는 본 소스를 사용함에 있어 모든 결과물에 대한 책임은 지지 않습니다.
- * 소스에 대한 버그 사항은 사이트 게시판을 통해 남겨주세요.   
+ * 소스에 대한 버그 사항은 사이트 게시판을 통해 남겨주세요.
+ *     
  */
 public class FileUtils {
 	/**
