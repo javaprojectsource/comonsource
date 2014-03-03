@@ -9,18 +9,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 /**
  * FileUtils 
- * <p>File Ã³¸®¿¡ ´ëÇÑ Util</p>
+ * <p>File ì²˜ë¦¬ì— ëŒ€í•œ Util</p>
  * @author www.javaproject.co.kr 
- * ¼Ò½ºÀÇ ÀÚÀ¯·Î¿î »ç¿ë,º¯°æ,Àç ¹èÆ÷°¡ °¡´ÉÇÕ´Ï´Ù.
- * ÀÚ¹ÙÇÁ·ÎÁ§Æ®»çÀÌÆ®´Â º» ¼Ò½º¸¦ »ç¿ëÇÔ¿¡ ÀÖ¾î ¸ğµç °á°ú¹°¿¡ ´ëÇÑ Ã¥ÀÓÀº ÁöÁö ¾Ê½À´Ï´Ù.
- * ¼Ò½º¿¡ ´ëÇÑ ¹ö±× »çÇ×Àº »çÀÌÆ® °Ô½ÃÆÇÀ» ÅëÇØ ³²°ÜÁÖ¼¼¿ä. 
+ * ì†ŒìŠ¤ì˜ ììœ ë¡œìš´ ì‚¬ìš©,ë³€ê²½,ì¬ ë°°í¬ê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+ * ìë°”í”„ë¡œì íŠ¸ì‚¬ì´íŠ¸ëŠ” ë³¸ ì†ŒìŠ¤ë¥¼ ì‚¬ìš©í•¨ì— ìˆì–´ ëª¨ë“  ê²°ê³¼ë¬¼ì— ëŒ€í•œ ì±…ì„ì€ ì§€ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ * ì†ŒìŠ¤ì— ëŒ€í•œ ë²„ê·¸ ì‚¬í•­ì€ ì‚¬ì´íŠ¸ ê²Œì‹œíŒì„ í†µí•´ ë‚¨ê²¨ì£¼ì„¸ìš”. 
  * 
  *     
  */
 public class FileUtils {
 	/**
-	 * ÆÄÀÏÀ» º¹»ç ÇÑ´Ù 
-	 * <p>»ç¿ë¹ı  : FileUtils.copy(file ,target)</p>
+	 * íŒŒì¼ì„ ë³µì‚¬ í•œë‹¤ 
+	 * <p>ì‚¬ìš©ë²•  : FileUtils.copy(file ,target)</p>
 	 * @param source
 	 * @param target
 	 * @return
@@ -57,10 +57,10 @@ public class FileUtils {
 	            }
 	        }
 	    }
-	 
+
 	 /**
-	  * ÆÄÀÏÀ» º¹»çÇÑ´Ù.
-	  * <p>»ç¿ë¹ı  : FileUtils.copy(source ,target)</p>
+	  * íŒŒì¼ì„ ë³µì‚¬í•œë‹¤.
+	  * <p>ì‚¬ìš©ë²•  : FileUtils.copy(source ,target)</p>
 	  * @param source
 	  * @param target
 	  * @return
@@ -73,10 +73,10 @@ public class FileUtils {
 	            return false;
 	        }
 	    }
-	 
+
 	 /**
-	  * ÆÄÀÏÀ» »èÁ¦ ÇÑ´Ù.
-	  * <p>»ç¿ë¹ı  : FileUtils.delete(fileFullPath)</p>
+	  * íŒŒì¼ì„ ì‚­ì œ í•œë‹¤.
+	  * <p>ì‚¬ìš©ë²•  : FileUtils.delete(fileFullPath)</p>
 	  * @param fileNm
 	  * @return
 	  */
@@ -89,9 +89,9 @@ public class FileUtils {
 	            return false;
 	        }
 	    }
-	 
+
 	 /**
-	  * ÆÄÀÏÀ» ÀÌµ¿ÇÑ´Ù.
+	  * íŒŒì¼ì„ ì´ë™í•œë‹¤.
 	  * @param source
 	  * @param target
 	  * @return
@@ -111,10 +111,10 @@ public class FileUtils {
 	            return false;
 	        }
 	    }
-	  
-	  
+
+
 	  /**
-	   * µå·ºÅä¸®¸¦ »ı¼ºÇÑ´Ù. 
+	   * ë ‰í† ë¦¬ë¥¼ ìƒì„±í•œë‹¤. 
 	   * 
 	   * @param path
 	   */
@@ -123,7 +123,7 @@ public class FileUtils {
 	            path.mkdirs();
 	        }
 	  }
-	  
+
 	  /**
 	   * 
 	   * @param path
