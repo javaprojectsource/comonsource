@@ -114,7 +114,7 @@ public class FileUtils {
 
 
 	  /**
-	   * 렉토리를 생성한다. 
+	   * 디렉토리를 생성한다.
 	   * 
 	   * @param path
 	   */
