@@ -8,19 +8,19 @@ import javax.crypto.KeyGenerator;
 
 /**
  * SecurityUtil 
- * <p>Map Ã³¸®¿¡ ´ëÇÑ Util</p>
+ * <p>Map ì²˜ë¦¬ì— ëŒ€í•œ Util</p>
  * @author www.javaproject.co.kr 
- * ¼Ò½ºÀÇ ÀÚÀ¯·Î¿î »ç¿ë,º¯°æ,Àç ¹èÆ÷°¡ °¡´ÉÇÕ´Ï´Ù.
- * ÀÚ¹ÙÇÁ·ÎÁ§Æ®»çÀÌÆ®´Â º» ¼Ò½º¸¦ »ç¿ëÇÔ¿¡ ÀÖ¾î ¸ğµç °á°ú¹°¿¡ ´ëÇÑ Ã¥ÀÓÀº ÁöÁö ¾Ê½À´Ï´Ù.
- * ¼Ò½º¿¡ ´ëÇÑ ¹ö±× »çÇ×Àº »çÀÌÆ® °Ô½ÃÆÇÀ» ÅëÇØ ³²°ÜÁÖ¼¼¿ä.   
+ * ì†ŒìŠ¤ì˜ ììœ ë¡œìš´ ì‚¬ìš©,ë³€ê²½,ì¬ ë°°í¬ê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+ * ìë°”í”„ë¡œì íŠ¸ì‚¬ì´íŠ¸ëŠ” ë³¸ ì†ŒìŠ¤ë¥¼ ì‚¬ìš©í•¨ì— ìˆì–´ ëª¨ë“  ê²°ê³¼ë¬¼ì— ëŒ€í•œ ì±…ì„ì€ ì§€ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ * ì†ŒìŠ¤ì— ëŒ€í•œ ë²„ê·¸ ì‚¬í•­ì€ ì‚¬ì´íŠ¸ ê²Œì‹œíŒì„ í†µí•´ ë‚¨ê²¨ì£¼ì„¸ìš”.   
  */
 public class SecurityUtil {
-		
+
 	 private static Key key = null;
-	  
+
 	  static {
 	   if(key == null) {
-	    // Key ÃÊ±âÈ­
+	    // Key ì´ˆê¸°í™”
 	   KeyGenerator keyGenerator;
 	    try {
 	     keyGenerator = KeyGenerator.getInstance("TripleDES");
@@ -31,10 +31,10 @@ public class SecurityUtil {
 	    }
 	   }
 	  }
-	  
+
 	  /**
-	   * ¾ÏÈ£È­À» ÇÑ´Ù.
-	   * <p>  »ç¿ë¹ı : SecurityUtil.encode("abc")</p> 
+	   * ì•”í˜¸í™”ì„ í•œë‹¤.
+	   * <p>  ì‚¬ìš©ë²• : SecurityUtil.encode("abc")</p> 
 	   * @param inStr
 	   * @return
 	   */
@@ -45,7 +45,7 @@ public class SecurityUtil {
 	    cipher.init(Cipher.ENCRYPT_MODE, key);
 	    byte[] plaintext = inStr.getBytes("UTF8");
 	    byte[] ciphertext = cipher.doFinal(plaintext);
-	    
+
 	    sb = new StringBuffer(ciphertext.length * 2);
 	    for(int i = 0; i < ciphertext.length; i++) {
 	     String hex = "0" + Integer.toHexString(0xff & ciphertext[i]); 
@@ -56,10 +56,10 @@ public class SecurityUtil {
 	   }
 	   return sb.toString();
 	  }
-	  
+
 	  /**
-	   * º¹È£È­¸¦ ÇÑ´Ù
-	   * <p>  »ç¿ë¹ı : SecurityUtil.decode("safsdaf4ewgsdf")</p>
+	   * ë³µí˜¸í™”ë¥¼ í•œë‹¤
+	   * <p>  ì‚¬ìš©ë²• : SecurityUtil.decode("safsdaf4ewgsdf")</p>
 	   * @param inStr
 	   * @return
 	   */
@@ -79,5 +79,5 @@ public class SecurityUtil {
 	   }
 	   return text;
 	  }
-	
+
 }

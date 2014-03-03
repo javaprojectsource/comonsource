@@ -1,38 +1,38 @@
 package commonsource;
 /**
  * StringUtil 
- * <p>String Ã³¸®¿¡ ´ëÇÑ Util</p>
+ * <p>String ì²˜ë¦¬ì— ëŒ€í•œ Util</p>
  * @author www.javaproject.co.kr 
- * ¼Ò½ºÀÇ ÀÚÀ¯·Î¿î »ç¿ë,º¯°æ,Àç ¹èÆ÷°¡ °¡´ÉÇÕ´Ï´Ù.
- * ÀÚ¹ÙÇÁ·ÎÁ§Æ®»çÀÌÆ®´Â º» ¼Ò½º¸¦ »ç¿ëÇÔ¿¡ ÀÖ¾î ¸ğµç °á°ú¹°¿¡ ´ëÇÑ Ã¥ÀÓÀº ÁöÁö ¾Ê½À´Ï´Ù.
- * ¼Ò½º¿¡ ´ëÇÑ ¹ö±× »çÇ×Àº »çÀÌÆ® °Ô½ÃÆÇÀ» ÅëÇØ ³²°ÜÁÖ¼¼¿ä.   
+ * ì†ŒìŠ¤ì˜ ììœ ë¡œìš´ ì‚¬ìš©,ë³€ê²½,ì¬ ë°°í¬ê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.
+ * ìë°”í”„ë¡œì íŠ¸ì‚¬ì´íŠ¸ëŠ” ë³¸ ì†ŒìŠ¤ë¥¼ ì‚¬ìš©í•¨ì— ìˆì–´ ëª¨ë“  ê²°ê³¼ë¬¼ì— ëŒ€í•œ ì±…ì„ì€ ì§€ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ * ì†ŒìŠ¤ì— ëŒ€í•œ ë²„ê·¸ ì‚¬í•­ì€ ì‚¬ì´íŠ¸ ê²Œì‹œíŒì„ í†µí•´ ë‚¨ê²¨ì£¼ì„¸ìš”.   
  */
 public class StringUtils {
-	
-	
+
+
 	/**
-	 *  Null Ã¼Æ®¸¦ ÇÑ´Ù
-	 * <p>  »ç¿ë¹ı : if(StringUtils.isNull(str)) { }</p>
-	 * @param val ³Î Ã¼Å©¸¦ ÇÒ  °ª
+	 *  Null ì²´íŠ¸ë¥¼ í•œë‹¤
+	 * <p>  ì‚¬ìš©ë²• : if(StringUtils.isNull(str)) { }</p>
+	 * @param val ë„ ì²´í¬ë¥¼ í•   ê°’
 	 * @return
 	 */
 	public static boolean isNull(String val){
 		return (val==null);
 	}
-	
+
 	/**
-	 * String °ªÀ¸·Î º¯È¯ÇÑ´Ù.
-	 * <p>»ç¿ë¹ı : String s = StringUtils.stringValue(str);</p>
-	 * @param val String value·Î º¯È¯ ÇÒ °ª
+	 * String ê°’ìœ¼ë¡œ ë³€í™˜í•œë‹¤.
+	 * <p>ì‚¬ìš©ë²• : String s = StringUtils.stringValue(str);</p>
+	 * @param val String valueë¡œ ë³€í™˜ í•  ê°’
 	 * @return
 	 */
 	public static String stringValue(String val) {
 		return stringValue(val,"");
 	}
-	
+
 	/**
-	 * String °ªÀ¸·Î º¯È¯ÇÏ°í  nullÀÏ °æ¿ì String °ªÀ» ¼¼ÆÃ ÇÑ´Ù
-	 * <p>»ç¿ë¹ı : String s = StringUtils.stringValue(str,"abc");</p>
+	 * String ê°’ìœ¼ë¡œ ë³€í™˜í•˜ê³   nullì¼ ê²½ìš° String ê°’ì„ ì„¸íŒ… í•œë‹¤
+	 * <p>ì‚¬ìš©ë²• : String s = StringUtils.stringValue(str,"abc");</p>
 	 * @param val
 	 * @param val2
 	 * @return
@@ -40,21 +40,21 @@ public class StringUtils {
 	public static String stringValue(String val,String val2){
 		return  (val==null)?val2:val;
 	}
-	
+
 	/**
-	 * String £À» int °ªÀ¸·Î º¯È¯ÇÑ´Ù
-	 *  <p>»ç¿ë¹ı : int a = StringUtils.intValue(str);</p>
+	 * String Âï¼  int ê°’ìœ¼ë¡œ ë³€í™˜í•œë‹¤
+	 *  <p>ì‚¬ìš©ë²• : int a = StringUtils.intValue(str);</p>
 	 * @param val
 	 * @return
 	 */
 	public static int intValue(String val){
 		return intValue(val,0);
 	}
-	
-	
+
+
 	/**
-	 * String £À» int °ªÀ¸·Î º¯È¯ÇÑ´Ù
-	 * <p>»ç¿ë¹ı : int a = StringUtils.intValue(str,5);</p>
+	 * String Âï¼  int ê°’ìœ¼ë¡œ ë³€í™˜í•œë‹¤
+	 * <p>ì‚¬ìš©ë²• : int a = StringUtils.intValue(str,5);</p>
 	 * @param val
 	 * @return
 	 */
