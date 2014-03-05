@@ -141,7 +141,7 @@ public class FileUtils {
 	 * 파일의 확장자를 체크하여 필터링된 확장자를 포함한 파일인 경우에 예외를 발생한다.
 	 * @param file
 	 * */
-	public void badFileExtIsReturnException(File file) {
+	public static void badFileExtIsReturnException(File file) {
 		String fileName = file.getName();
 		String ext = fileName.substring(fileName.lastIndexOf(".") + 1,
 				fileName.length());
@@ -164,7 +164,7 @@ public class FileUtils {
 	 * 파일의 확장자를 체크하여 필터링된 확장자를 포함한 파일인 경우에 true를 리턴한다.
 	 * @param file
 	 * */
-	public boolean badFileExtIsReturnBoolean(File file) {
+	public static boolean badFileExtIsReturnBoolean(File file) {
 		String fileName = file.getName();
 		String ext = fileName.substring(fileName.lastIndexOf(".") + 1,
 				fileName.length());
