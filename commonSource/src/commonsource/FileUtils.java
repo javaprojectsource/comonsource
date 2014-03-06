@@ -186,8 +186,8 @@ public class FileUtils {
 	 */
 	public static boolean deleteDir(String dirName) throws Exception{
 	    File file = new File(dirName);
-        return deleteDir(file);
-    }
+            return deleteDir(file);
+        }
 
 	/**
 	 * 디렉토리 전체를 삭제하는 메소드
@@ -207,7 +207,7 @@ public class FileUtils {
 	    }
 	    else if (dir.isFile())
 	        result = dir.delete();
-        return result;
+            return result;
 	}
 }
 
