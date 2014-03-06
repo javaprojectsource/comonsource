@@ -179,7 +179,36 @@ public class FileUtils {
 		return false;
 	}
 	
-	
+		/**
+	 * 디렉토리 전체를 삭제하는 메소드
+	 *
+	 * @param  String
+	 */
+	public static boolean deleteDir(String dirName) throws Exception{
+	    File file = new File(dirName);
+        return deleteDir(file);
+    }
+
+	/**
+	 * 디렉토리 전체를 삭제하는 메소드
+	 *
+	 * @param  File
+	 */
+	public static boolean deleteDir(File dir) throws Exception{
+	    boolean result = false;
+
+   	    if (dir.isDirectory()) {
+   	        File[] fileList = dir.listFiles();
+            int cnt = fileList.length;
+            if (cnt != 0 )
+	            for (int i=0; i<cnt; i++)
+	                result = deleteDir(fileList[i]);
+            result = dir.delete();
+	    }
+	    else if (dir.isFile())
+	        result = dir.delete();
+        return result;
+	}
 }
 
 
